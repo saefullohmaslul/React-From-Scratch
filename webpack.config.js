@@ -18,13 +18,22 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.(css|s[ac]ss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader'
+        }
       }
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
+    alias: {
+      '@': path.resolve(__dirname, 'src/')
+    }
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),

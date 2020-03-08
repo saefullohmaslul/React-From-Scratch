@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "webpack.config.js"
+  ],
+  "ext": "js,json",
+  "exec": "webpack-dev-server --mode development",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ]
+}

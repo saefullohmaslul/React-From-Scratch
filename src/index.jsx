@@ -1,5 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import { Router } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import './styles/index.scss'
+import App from './app'
+
+const history = createBrowserHistory()
+
+const Index = () => {
+  return (
+    <Router history={history}>
+      <App />
+    </Router>
+  )
+}
+
+ReactDOM.render(<Index />, document.getElementById('root'))

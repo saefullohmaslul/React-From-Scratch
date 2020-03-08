@@ -7,8 +7,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.jsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: "/dist/"
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -50,7 +49,8 @@ module.exports = {
     publicPath: "http://localhost:3000",
     open: true,
     stats: "errors-only",
-    overlay: true
+    overlay: true,
+    filename: 'bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({

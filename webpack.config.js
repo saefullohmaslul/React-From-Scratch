@@ -26,6 +26,14 @@ module.exports = {
         use: {
           loader: 'url-loader'
         }
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ]
       }
     ]
   },

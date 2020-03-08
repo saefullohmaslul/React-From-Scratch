@@ -15,6 +15,7 @@
   "author": "Saefulloh Maslul",
   "license": "MIT",
   "dependencies": {
+    "html-loader": "^0.5.5",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

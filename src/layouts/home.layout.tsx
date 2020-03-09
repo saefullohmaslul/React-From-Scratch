@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HomeLayout = ({ children }) => {
+const HomeLayout = ({ children }: any) => {
   return (
     <div className="is-flex justify-content-center align-items-center height-100">
       {children}

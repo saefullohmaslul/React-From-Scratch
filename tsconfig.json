@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "es6",
+    "module": "commonjs",
+    "lib": [
+      "ES2015",
+      "ES2016",
+      "DOM"
+    ],
+    "allowJs": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "importHelpers": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

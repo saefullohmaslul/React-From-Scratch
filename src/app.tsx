@@ -16,11 +16,13 @@ const App = () => {
 
   return (
     <Switch>
-      {routes.map((route, index) => {
-        return (
-          <LayoutRoute key={index} layout={route.layout} exact={route.exact} component={route.component} path={route.path} />
-        )
-      })}
+      {
+        routes.map((route, index) => {
+          return (
+            <LayoutRoute key={index} layout={route.layout} exact={route.exact} component={route.component} path={route.path} />
+          )
+        })
+      }
     </Switch>
   )
 }

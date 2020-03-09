@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   mode: 'development',
-  entry: path.resolve(__dirname, 'src', 'index.jsx'),
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -12,10 +12,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules|bower_components)/,
         include: path.resolve(__dirname, 'src'),
-        use: ['babel-loader'],
+        use: ['ts-loader'],
       },
       {
         test: /\.(css|s[ac]ss)$/,
@@ -38,7 +38,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@': path.resolve(__dirname, 'src')
     }

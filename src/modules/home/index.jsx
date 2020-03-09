@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { addMenuData } from '../../redux/actions/menu.action'
+import { addMenuData } from '@/redux/actions/menu.action'
 
 const Home = ({ menus, addMenu }) => {
   return (

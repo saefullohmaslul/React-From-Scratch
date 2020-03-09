@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Switch } from 'react-router-dom'
 
 import useRouter from 'use-react-router'
-import routes from '@/routes'
+import routes, { IRoute } from '@/routes'
 import LayoutRoute from '@/layouts/index.layout'
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <Switch>
       {
-        routes.map((route, index) => {
+        routes.map((route: IRoute, index: number) => {
           return (
             <LayoutRoute key={index} layout={route.layout} exact={route.exact} component={route.component} path={route.path} />
           )

@@ -13,11 +13,11 @@ const initialState: UserState = {
   username: null
 }
 
-const login = (username: string) => {
+export const login = (username: string) => {
   return typedAction('user/LOGIN', username)
 }
 
-const logout = () => {
+export const logout = () => {
   return typedAction('user/LOGOUT')
 }
 

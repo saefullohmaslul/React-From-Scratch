@@ -7,7 +7,8 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -50,7 +51,8 @@ module.exports = {
     open: true,
     stats: "errors-only",
     overlay: true,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({

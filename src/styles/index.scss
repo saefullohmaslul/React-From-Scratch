@@ -1,7 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
 }
 
-@import './utilities'
+@import './utilities';
